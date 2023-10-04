@@ -1,0 +1,19 @@
+package embox.cmd.testing
+
+@AutoCmd
+@Cmd(name = "sched_blocked")
+module sched_blocked {
+	source "sched_blocked.c"
+
+	depends embox.compat.libc.stdio.printf
+	depends embox.compat.posix.pthread
+}
+
+@AutoCmd
+@Cmd(name = "sched_blocked_timer")
+module sched_blocked_timer {
+	source "sched_blocked_timer.c"
+
+	depends embox.compat.libc.stdio.printf
+	depends embox.compat.posix.pthread
+}
